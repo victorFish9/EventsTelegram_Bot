@@ -37,7 +37,7 @@ async def events(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(message)
 
 if __name__ == "__main__":
-    TOKEN = "7880283881:AAF4FNWuFQ3joIN2TY2QrrDTuq82yWeXOkU"
+    TOKEN = os.environ["BOT_TOKEN"]
 
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
