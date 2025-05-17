@@ -25,7 +25,7 @@ async def events(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == "__main__":
     import os
-    TOKEN = os.environ[""]
+    TOKEN = os.environ["BOT_TOKEN"]
 
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
