@@ -7,6 +7,7 @@ import datetime
 EVENTS = [
     {"title": "Gucci Cruise 2026", "date": "15 мая 2025", "location": "Palazzo Settimanni"},
     {"title": "Pitti Uomo 106", "date": "18-21 июня", "location": "Fortezza da Basso"},
+    {"title": "Santa Maria Novella party", "date": "11-22 июня", "location": "Santa Maria Novella"},
 ]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -24,7 +25,7 @@ async def events(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == "__main__":
     import os
-    TOKEN = os.environ["BOT_TOKEN"]
+    TOKEN = os.environ[""]
 
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
